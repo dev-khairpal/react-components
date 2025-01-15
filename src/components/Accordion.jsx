@@ -18,7 +18,7 @@ const Accordion = ({ items }) => {
       {items.map((item, index)=>{
         const isExpanded = expanded === index;
         return (
-          <div key={item.id} className="w-[50%] text-start p-4 border">
+          <div key={item.id} className="w-[50%] text-start p-4 border transition-all ease-in-out">
             <h3 className="bg-gay-200 flex gap-4 p-4 items-center cursor-pointer justify-between"
              onClick={()=>handleClick(index)}>{item.label}
             <span>{isExpanded ? <IoIosArrowDown /> : <IoIosArrowForward />}</span>

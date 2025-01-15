@@ -8,7 +8,8 @@ const Button = ({
   warning,
   danger,
   outline,
-  rounded
+  rounded,
+  onClick
 }) => {
 
   const buttonClass = clsx(
@@ -26,7 +27,7 @@ const Button = ({
     }
   )
 
-  return <button className={buttonClass}>{children}</button>
+  return <button onClick={onClick} className={buttonClass}>{children}</button>
 };
 
 
